@@ -1,0 +1,10 @@
+func Floyd(L[1...n],[1...n]):
+    matriz D[1...n][1...n]
+    D=L
+    para k=1 to n hacer:
+        para i=1 to n hacer:
+            para j=1 to n hacer:
+                if(D[i,k]+D[k,j]<D[i,j])
+                    D[i,j]=D[i,k]+D[k,j]
+                    P[i,j]=k
+    retuen D,P
